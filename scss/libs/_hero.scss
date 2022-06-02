@@ -1,0 +1,192 @@
+//   HERO
+.hero {
+    background: $color-bg;
+    .ftco-slant:after {
+        background: $primary !important;
+    }
+    .menu {
+        font-family: $font-title;
+        position: relative;
+        // width: 65%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        animation-delay: 0ms;
+        animation-duration: 2000ms;
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+        ul {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            li {
+                list-style: none;
+                padding-bottom: 1em;
+                a {
+                    position: relative;
+                    display: block;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: 4em;
+                    color: $white;
+                    font-weight: 700;
+                    transition: 500ms;
+                }
+                a:hover {
+                    color: rgba(255,255,255,0.1);
+                    transform: translateY(-20px);
+                }
+                a::before {
+                    content: attr(data-text);
+                    position: absolute;
+                    bottom: -10px;
+                    pointer-events: none;
+                    z-index: 1;
+                    font-size: .35em;
+                    color: $primary;
+                    font-weight: 500;
+                    letter-spacing: 100px;
+                    white-space:nowrap;
+                    opacity: 0;
+                    transition: 500ms;
+                    text-shadow: 0 0 10px $primary,
+                    0 0 30px $primary,
+                    0 0 80px $primary;
+                }
+                a:hover::before {
+                    letter-spacing: 6px;
+                    opacity: 1;
+                    transition-delay: 250ms;
+                }
+            }
+        }
+    }
+    .j-card {
+        animation-delay: 0ms;
+        animation-duration: 2000ms;
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+        margin: auto;
+        padding-left: 3em;
+        img {
+            max-width: 100%;
+        }
+    }
+    .home-content__line {
+        display: block;
+        padding: 0;
+        width: 2px;
+        height: 7.2rem;
+        background-color: $primary;
+        position: absolute;
+        right: 7.2rem;
+        bottom: 0;
+    }
+}
+@media only screen and (max-width: $xl) {
+    .hero {
+        .menu {
+            ul {
+                li {
+                    a {
+                        font-size: 3em;
+                    }
+                }
+            }
+        }
+        .j-card {
+            padding: 0;
+        }
+    }
+}
+@media only screen and (max-width: $md) {
+    .hero {
+        .menu {
+            ul {
+                li {
+                    a {
+                        font-size: 2.5em;
+                    }
+                }
+            }
+        }
+    }
+}
+  
+  @media only screen and (max-width: $sm) {
+    .hero {
+        .menu {
+            ul {
+                li {
+                    a {
+                        font-size: 2em;
+                    }
+                }
+            }
+        }
+        .j-card {
+            display: none;
+        }
+    }
+  }
+ /* fade in */
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 150%, 0);
+        -ms-transform: translate3d(0, 150%, 0);
+        transform: translate3d(0, 150%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 150%, 0);
+        -ms-transform: translate3d(0, 150%, 0);
+        transform: translate3d(0, 150%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+/* fade out */
+
+@-webkit-keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -150%, 0);
+        -ms-transform: translate3d(0, -150%, 0);
+        transform: translate3d(0, -150%, 0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -150%, 0);
+        -ms-transform: translate3d(0, -150%, 0);
+        transform: translate3d(0, -150%, 0);
+    }
+}

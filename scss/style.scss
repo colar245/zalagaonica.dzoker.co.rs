@@ -107,6 +107,12 @@ h1, h2, h3, h4, h5,
 		text-transform: uppercase;
 		font-size: 16px;
 		letter-spacing: .1em;
+		@media screen and (max-width: $md) {
+			font-size: 1em;
+		}
+		@media screen and (max-width: $sm) {
+			font-size: .8em;
+		}
 	}
 	
 	&.scrolled  {
@@ -143,7 +149,12 @@ h1, h2, h3, h4, h5,
 			text-transform: uppercase;
 			font-size: 16px;
 			letter-spacing: .1em;
-
+			@media screen and (max-width: $md) {
+				font-size: 1em;
+			}
+			@media screen and (max-width: $sm) {
+				font-size: .8em;
+			}
 		}
 		.nav-link {
 			padding-top: .7rem!important;
@@ -170,6 +181,12 @@ h1, h2, h3, h4, h5,
 
 .navbar-brand {
 	letter-spacing: .1em;
+	@media screen and (max-width: $md) {
+		font-size: 1em;
+	}
+	@media screen and (max-width: $sm) {
+		font-size: .8em;
+	}
 }
 
 .bg-image {
